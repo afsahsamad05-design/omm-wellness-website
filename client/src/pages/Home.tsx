@@ -34,42 +34,42 @@ const treatments = [
     title: "Deep Tissue",
     detail:
       "Slow, sustained pressure for deeper muscular tension, recovery, and the places that need more focused attention.",
-    image: "/manus-storage/omm-treatment_b59f9fd7.jpg",
+    image: "/manus-storage/omm-deep-tissue_caf6d826.jpg",
   },
   {
     number: "02",
     title: "Reflexology",
     detail:
       "A focused foot treatment tailored to your needs, designed to leave the whole body feeling lighter and renewed.",
-    image: "/manus-storage/omm-treatment_b59f9fd7.jpg",
+    image: "/manus-storage/omm-reflexology_b5ac1d1b.jpg",
   },
   {
     number: "03",
     title: "Hot Stone",
     detail:
       "Warm stones and flowing massage work together to soften tension and settle the nervous system.",
-    image: "/manus-storage/omm-hero_3526a111.jpg",
+    image: "/manus-storage/omm-hot-stone_6d8a6ce8.jpg",
   },
   {
     number: "04",
     title: "Swedish",
     detail:
       "Classical strokes, kneading, gliding, and rhythmic movement for an unhurried reset.",
-    image: "/manus-storage/omm-careers_5e2a6e57.jpg",
+    image: "/manus-storage/omm-swedish_440dc1a5.jpg",
   },
   {
     number: "05",
     title: "Trigger Point",
     detail:
       "Precise attention to constricted muscle areas that can refer discomfort elsewhere in the body.",
-    image: "/manus-storage/omm-treatment_b59f9fd7.jpg",
+    image: "/manus-storage/omm-trigger-point_541540e4.jpg",
   },
   {
     number: "06",
     title: "Warrior Massage",
     detail:
       "A distinctive Thai and yoga-inspired combination of rhythmic oil massage, gentle stretching, and mindful movement.",
-    image: "/manus-storage/omm-treatment_b59f9fd7.jpg",
+    image: "/manus-storage/omm-warrior_3560c0eb.jpg",
   },
 ];
 

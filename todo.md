@@ -1,8 +1,8 @@
-# Public reviews update
+# Unique treatment imagery update
 
-- [x] Inspect the user-provided Google results and verify the business identity.
-- [x] Capture only publicly visible review text, attribution, rating, and source details that can be verified.
-- [x] Add a clearly sourced testimonials section without inventing, paraphrasing, or duplicating reviews.
-- [x] Add a source link or attribution note so visitors can verify the reviews.
+- [x] Inventory repeated image sources across the hero, intro, treatment cards, training, and careers sections.
+- [x] Map each treatment to a distinct visual direction: Deep Tissue, Reflexology, Hot Stone, Swedish, Trigger Point, and Warrior Massage.
+- [x] Generate or prepare unique images for each treatment and upload them for web use.
+- [x] Replace repeated image references and update alt text to match each service.
 - [x] Run type/build checks and desktop/mobile visual verification.
 - [ ] Save a new checkpoint and deliver the updated project version.
