@@ -23,6 +23,10 @@ const email = "info@oamthetherapist.com";
 const whatsappUrl = (message: string) =>
   `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
+const freshaIndividualUrl = "https://www.fresha.com/a/oam-wellness-spa-by-oam-the-therapist-dubai-home-spa-and-massage-at-home-service-tcw8lzjq/booking?allOffer=true&menu=true&entryPoint=all_offer_book_individual_appointment&pId=522208";
+const freshaGroupUrl = "https://www.fresha.com/a/oam-wellness-spa-by-oam-the-therapist-dubai-home-spa-and-massage-at-home-service-tcw8lzjq/booking?allOffer=true&groupBooking=true&menu=true&entryPoint=all_offer_book_group_appointment&pId=522208";
+const freshaPackagesUrl = "https://www.fresha.com/a/oam-wellness-spa-by-oam-the-therapist-dubai-home-spa-and-massage-at-home-service-tcw8lzjq/packages?menu=true&pId=522208";
+
 const treatments = [
   {
     number: "01",
@@ -75,8 +79,9 @@ const pricingPackages = [
     eyebrow: "60 minutes · one guest",
     detail: "A focused treatment for the body that needs a considered pause today.",
     includes: ["Choose any core massage", "Therapist-led consultation", "Home setup and reset"],
-    price: "Current rate on WhatsApp",
-    cta: "Ask for this rate",
+    price: "Live 60-minute options on Fresha",
+    cta: "Book on Fresha",
+    bookingUrl: freshaIndividualUrl,
     featured: false,
   },
   {
@@ -85,8 +90,9 @@ const pricingPackages = [
     eyebrow: "90 minutes · one guest",
     detail: "More time to release, recalibrate, and let the session unfold without rushing.",
     includes: ["Extended full-body session", "Treatment tailored to your needs", "Home setup and reset"],
-    price: "Current rate on WhatsApp",
-    cta: "Book the longer ritual",
+    price: "Live 90-minute options on Fresha",
+    cta: "Book on Fresha",
+    bookingUrl: freshaIndividualUrl,
     featured: true,
   },
   {
@@ -95,8 +101,9 @@ const pricingPackages = [
     eyebrow: "2 × 60 minutes · one visit",
     detail: "A shared home spa moment for couples, friends, or anyone worth slowing down with.",
     includes: ["Two individual treatments", "Coordinated home arrival", "A shared, private setting"],
-    price: "Ask for today’s package rate",
-    cta: "Plan it for two",
+    price: "Live group booking on Fresha",
+    cta: "Book a group visit",
+    bookingUrl: freshaGroupUrl,
     featured: false,
   },
   {
@@ -105,8 +112,9 @@ const pricingPackages = [
     eyebrow: "3 × 60 minutes · series",
     detail: "A simple rhythm for making wellbeing part of the month, not a once-in-a-while idea.",
     includes: ["Three home sessions", "Flexible treatment choice", "Series scheduling support"],
-    price: "Ask for the series rate",
-    cta: "Ask about a series",
+    price: "Live package deals on Fresha",
+    cta: "View packages on Fresha",
+    bookingUrl: freshaPackagesUrl,
     featured: false,
   },
 ];
@@ -314,7 +322,7 @@ export default function Home() {
               <SectionLabel>Make it a ritual</SectionLabel>
               <h2>Packages that make <em>booking easier.</em></h2>
             </div>
-            <p>Start with one session or make space for a rhythm. Message us for today’s confirmed rate, availability, and the best fit for your home.</p>
+            <p>Start with one session or make space for a rhythm. Use the matching Fresha route below to see live prices, service options, and availability.</p>
           </div>
           <div className="pricing-grid">
             {pricingPackages.map((pack) => (
@@ -326,11 +334,11 @@ export default function Home() {
                 <div className="pricing-card__includes">
                   {pack.includes.map((item) => <span key={item}><Check size={14} />{item}</span>)}
                 </div>
-                <div className="pricing-card__bottom"><strong>{pack.price}</strong><a href={whatsappUrl(`Hello, I would like to enquire about the ${pack.name} package (${pack.eyebrow}). Please share today’s confirmed rate and availability.`)} target="_blank" rel="noreferrer">{pack.cta} <ArrowUpRight size={15} /></a></div>
+                <div className="pricing-card__bottom"><strong>{pack.price}</strong><a href={pack.bookingUrl} target="_blank" rel="noreferrer">{pack.cta} <ArrowUpRight size={15} /></a></div>
               </article>
             ))}
           </div>
-          <div className="pricing-note"><Sparkles size={16} /><span>Rates are confirmed on WhatsApp so the team can account for treatment choice, duration, location, and availability accurately.</span><a href={whatsappUrl("Hello, please share OMM Wellness package rates and today’s availability.")} target="_blank" rel="noreferrer">Request the current menu <MoveRight size={15} /></a></div>
+          <div className="pricing-note"><Sparkles size={16} /><span>Fresha shows the current service prices and availability. Choose an individual, group, or package route above and complete the booking there.</span><a href={freshaPackagesUrl} target="_blank" rel="noreferrer">Open the Fresha menu <MoveRight size={15} /></a></div>
         </section>
 
         <section className="booking-rail">

@@ -1,8 +1,7 @@
-# Pricing update tasks
+# Fresha direct-booking update
 
-- [x] Verify whether the existing website publishes approved treatment rates or package deals.
-- [x] Decide whether displayed amounts are confirmed or need an explicit provisional label.
-- [x] Add a dedicated pricing section with package comparisons and direct WhatsApp booking actions.
-- [x] Add pricing navigation and supporting conversion copy without disrupting existing sections.
-- [x] Run type/build checks and desktop/mobile visual verification.
+- [x] Inspect the current Fresha location and service pages for direct booking URLs.
+- [x] Map each package card to a verified Fresha destination or document any unmatched package.
+- [x] Replace WhatsApp package actions with direct Fresha booking links and update supporting copy.
+- [x] Run type/build checks and verify desktop/mobile pricing behavior.
 - [ ] Save a new checkpoint and deliver the updated project version.
