@@ -173,6 +173,38 @@ h2 { margin-bottom: 24px; font-size: clamp(48px, 5.3vw, 78px); line-height: .94;
 .treatment-card a { margin-top: auto; display: inline-flex; align-items: center; gap: 7px; color: var(--terracotta-deep); font-size: 10px; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
 .treatment-card a:hover { gap: 11px; }
 
+.pricing-section { padding: 128px 7vw 112px; background: var(--sand); }
+.pricing-heading-row { margin-bottom: 48px; }
+.pricing-heading-row > p { max-width: 365px; }
+.pricing-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; align-items: stretch; }
+.pricing-card { min-height: 435px; padding: 22px 20px 20px; display: flex; flex-direction: column; background: var(--paper); border: 1px solid var(--line); transition: transform 230ms var(--ease-out), box-shadow 230ms var(--ease-out); }
+.pricing-card:hover { transform: translateY(-6px); box-shadow: 0 20px 35px rgba(55,47,37,.11); }
+.pricing-card--featured { position: relative; color: var(--cream); background: var(--olive-deep); border-color: var(--olive-deep); transform: translateY(-12px); box-shadow: 0 18px 34px rgba(55,65,51,.2); }
+.pricing-card--featured:hover { transform: translateY(-18px); }
+.pricing-card__top { min-height: 22px; display: flex; align-items: start; justify-content: space-between; color: var(--terracotta-deep); font-size: 10px; font-weight: 800; }
+.pricing-card--featured .pricing-card__top { color: #e1a78e; }
+.pricing-card__tag { max-width: 122px; padding: 5px 7px; color: var(--ink); background: #d6a087; font-size: 8px; line-height: 1.25; letter-spacing: .06em; text-align: right; text-transform: uppercase; }
+.pricing-card__eyebrow { margin: 33px 0 10px; color: var(--ink-soft); font-size: 9px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.pricing-card--featured .pricing-card__eyebrow { color: rgba(246,241,233,.62); }
+.pricing-card h3 { margin-bottom: 14px; font-size: 34px; line-height: .92; }
+.pricing-card__detail { min-height: 66px; margin-bottom: 21px; color: var(--ink-soft); font-size: 11px; line-height: 1.68; }
+.pricing-card--featured .pricing-card__detail { color: rgba(246,241,233,.72); }
+.pricing-card__includes { display: grid; gap: 9px; padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.pricing-card--featured .pricing-card__includes { border-color: rgba(246,241,233,.2); }
+.pricing-card__includes span { display: flex; align-items: center; gap: 7px; color: var(--ink-soft); font-size: 10px; line-height: 1.4; }
+.pricing-card--featured .pricing-card__includes span { color: rgba(246,241,233,.8); }
+.pricing-card__includes svg { flex: 0 0 auto; padding: 2px; color: var(--cream); background: var(--terracotta); border-radius: 50%; }
+.pricing-card__bottom { margin-top: auto; padding-top: 20px; display: grid; gap: 13px; }
+.pricing-card__bottom strong { color: var(--terracotta-deep); font-size: 11px; line-height: 1.3; letter-spacing: .03em; }
+.pricing-card--featured .pricing-card__bottom strong { color: #e1a78e; }
+.pricing-card__bottom a { display: inline-flex; align-items: center; gap: 7px; color: var(--ink); font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.pricing-card--featured .pricing-card__bottom a { color: var(--cream); }
+.pricing-card__bottom a:hover { gap: 11px; color: var(--terracotta-deep); }
+.pricing-note { margin-top: 27px; padding: 14px 16px; display: flex; align-items: center; gap: 11px; color: var(--ink-soft); background: rgba(252,250,246,.58); border: 1px solid var(--line); font-size: 10px; }
+.pricing-note svg { flex: 0 0 auto; color: var(--terracotta-deep); }
+.pricing-note span { max-width: 590px; }
+.pricing-note a { margin-left: auto; display: inline-flex; align-items: center; gap: 7px; color: var(--terracotta-deep); font-weight: 800; letter-spacing: .05em; text-transform: uppercase; white-space: nowrap; }
+
 .booking-rail { padding: 83px 9vw; display: grid; grid-template-columns: 1.1fr .9fr; gap: 9vw; align-items: center; color: var(--cream); background: var(--ink); }
 .booking-rail .section-label { color: #d69a80; }
 .booking-rail h2 { color: var(--cream); margin-bottom: 20px; }
@@ -255,7 +287,19 @@ h2 { margin-bottom: 24px; font-size: clamp(48px, 5.3vw, 78px); line-height: .94;
   .intro-section, .booking-rail, .process-section, .training-section, .careers-section, .contact-section { padding-left: 6vw; padding-right: 6vw; }
 }
 
+@media (max-width: 1050px) {
+  .pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pricing-card--featured { transform: none; }
+  .pricing-card--featured:hover { transform: translateY(-6px); }
+}
+
 @media (max-width: 800px) {
+  .pricing-section { padding: 95px 7vw; }
+  .pricing-grid { grid-template-columns: 1fr; }
+  .pricing-card { min-height: 0; }
+  .pricing-note { align-items: flex-start; flex-wrap: wrap; }
+  .pricing-note a { margin-left: 27px; }
+
   .announcement-bar { padding: 7px 5vw; justify-content: center; }
   .announcement-bar > span:first-child, .announcement-bar__divider { display: none; }
   .announcement-bar a { margin-left: 0; }

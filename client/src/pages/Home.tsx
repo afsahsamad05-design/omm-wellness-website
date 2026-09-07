@@ -68,6 +68,49 @@ const treatments = [
   },
 ];
 
+const pricingPackages = [
+  {
+    number: "01",
+    name: "Essential Reset",
+    eyebrow: "60 minutes · one guest",
+    detail: "A focused treatment for the body that needs a considered pause today.",
+    includes: ["Choose any core massage", "Therapist-led consultation", "Home setup and reset"],
+    price: "Current rate on WhatsApp",
+    cta: "Ask for this rate",
+    featured: false,
+  },
+  {
+    number: "02",
+    name: "Deep Restore",
+    eyebrow: "90 minutes · one guest",
+    detail: "More time to release, recalibrate, and let the session unfold without rushing.",
+    includes: ["Extended full-body session", "Treatment tailored to your needs", "Home setup and reset"],
+    price: "Current rate on WhatsApp",
+    cta: "Book the longer ritual",
+    featured: true,
+  },
+  {
+    number: "03",
+    name: "Ritual for Two",
+    eyebrow: "2 × 60 minutes · one visit",
+    detail: "A shared home spa moment for couples, friends, or anyone worth slowing down with.",
+    includes: ["Two individual treatments", "Coordinated home arrival", "A shared, private setting"],
+    price: "Ask for today’s package rate",
+    cta: "Plan it for two",
+    featured: false,
+  },
+  {
+    number: "04",
+    name: "Monthly Balance",
+    eyebrow: "3 × 60 minutes · series",
+    detail: "A simple rhythm for making wellbeing part of the month, not a once-in-a-while idea.",
+    includes: ["Three home sessions", "Flexible treatment choice", "Series scheduling support"],
+    price: "Ask for the series rate",
+    cta: "Ask about a series",
+    featured: false,
+  },
+];
+
 const processSteps = [
   ["01", "Tell us what you need", "Share your preferred treatment, timing, and location on WhatsApp."],
   ["02", "We prepare the ritual", "Your therapist arrives with the equipment and details needed for your session."],
@@ -189,6 +232,7 @@ export default function Home() {
         </button>
         <nav className={`site-nav ${menuOpen ? "site-nav--open" : ""}`}>
           <a href="#treatments" onClick={closeMenu}>Treatments</a>
+          <a href="#pricing" onClick={closeMenu}>Packages</a>
           <a href="#ritual" onClick={closeMenu}>The OMM way</a>
           <a href="#training" onClick={closeMenu}>Training</a>
           <a href="#careers" onClick={closeMenu}>Careers</a>
@@ -262,6 +306,31 @@ export default function Home() {
               </article>
             ))}
           </div>
+        </section>
+
+        <section className="pricing-section" id="pricing">
+          <div className="section-heading-row pricing-heading-row">
+            <div>
+              <SectionLabel>Make it a ritual</SectionLabel>
+              <h2>Packages that make <em>booking easier.</em></h2>
+            </div>
+            <p>Start with one session or make space for a rhythm. Message us for today’s confirmed rate, availability, and the best fit for your home.</p>
+          </div>
+          <div className="pricing-grid">
+            {pricingPackages.map((pack) => (
+              <article className={`pricing-card ${pack.featured ? "pricing-card--featured" : ""}`} key={pack.name}>
+                <div className="pricing-card__top"><span>{pack.number}</span>{pack.featured && <span className="pricing-card__tag">Most requested format</span>}</div>
+                <p className="pricing-card__eyebrow">{pack.eyebrow}</p>
+                <h3>{pack.name}</h3>
+                <p className="pricing-card__detail">{pack.detail}</p>
+                <div className="pricing-card__includes">
+                  {pack.includes.map((item) => <span key={item}><Check size={14} />{item}</span>)}
+                </div>
+                <div className="pricing-card__bottom"><strong>{pack.price}</strong><a href={whatsappUrl(`Hello, I would like to enquire about the ${pack.name} package (${pack.eyebrow}). Please share today’s confirmed rate and availability.`)} target="_blank" rel="noreferrer">{pack.cta} <ArrowUpRight size={15} /></a></div>
+              </article>
+            ))}
+          </div>
+          <div className="pricing-note"><Sparkles size={16} /><span>Rates are confirmed on WhatsApp so the team can account for treatment choice, duration, location, and availability accurately.</span><a href={whatsappUrl("Hello, please share OMM Wellness package rates and today’s availability.")} target="_blank" rel="noreferrer">Request the current menu <MoveRight size={15} /></a></div>
         </section>
 
         <section className="booking-rail">
