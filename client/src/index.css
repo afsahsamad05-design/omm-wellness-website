@@ -118,6 +118,22 @@ h2 { margin-bottom: 24px; font-size: clamp(48px,5.3vw,78px); line-height: .94; }
 .intro-image-card img { display: block; width: 100%; aspect-ratio: .88; object-fit: cover; }
 .intro-image-card span { position: absolute; bottom: -25px; left: -18px; padding: 12px 15px; color: var(--ink); background: var(--lime); font-family: var(--font-display); font-size: 19px; font-style: italic; transform: rotate(5deg); }
 
+.reviews-section { padding: 112px 9vw; display: grid; grid-template-columns: .75fr 1.25fr; gap: 9vw; align-items: center; color: var(--white); background: var(--blue); }
+.reviews-section .section-label { color: var(--lime); }
+.reviews-score { padding: 34px; background: var(--blue-deep); box-shadow: 14px 14px 0 var(--lime); }
+.reviews-score__number { margin: 18px 0 2px; font-family: var(--font-display); font-size: 104px; line-height: .8; }
+.reviews-score__stars { color: var(--lime); font-size: 21px; letter-spacing: .12em; }
+.reviews-score p { margin: 18px 0 25px; color: rgba(249,250,247,.7); font-size: 11px; line-height: 1.65; }
+.reviews-score p strong { color: var(--white); }
+.text-link--light { color: var(--lime); border-color: var(--lime); }
+.reviews-copy h2 { color: var(--white); }
+.reviews-copy h2 em { color: var(--lime); }
+.reviews-copy > p { max-width: 565px; color: rgba(249,250,247,.8); line-height: 1.9; }
+.review-themes { margin: 27px 0 28px; display: flex; flex-wrap: wrap; gap: 8px; }
+.review-themes span { padding: 8px 11px; color: var(--white); border: 1px solid rgba(249,250,247,.35); font-size: 10px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
+.reviews-source { margin: 0; color: rgba(249,250,247,.58) !important; font-size: 10px !important; line-height: 1.6 !important; }
+.reviews-source a { color: var(--lime); border-bottom: 1px solid var(--lime); }
+
 .treatments-section { padding: 126px 7vw 144px; background: var(--white); }
 .section-heading-row { margin-bottom: 57px; display: flex; align-items: end; justify-content: space-between; gap: 55px; }
 .section-heading-row h2 { max-width: 650px; margin-bottom: 0; }

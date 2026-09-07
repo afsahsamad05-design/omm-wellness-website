@@ -26,6 +26,7 @@ const whatsappUrl = (message: string) =>
 const freshaIndividualUrl = "https://www.fresha.com/a/oam-wellness-spa-by-oam-the-therapist-dubai-home-spa-and-massage-at-home-service-tcw8lzjq/booking?allOffer=true&menu=true&entryPoint=all_offer_book_individual_appointment&pId=522208";
 const freshaGroupUrl = "https://www.fresha.com/a/oam-wellness-spa-by-oam-the-therapist-dubai-home-spa-and-massage-at-home-service-tcw8lzjq/booking?allOffer=true&groupBooking=true&menu=true&entryPoint=all_offer_book_group_appointment&pId=522208";
 const freshaPackagesUrl = "https://www.fresha.com/a/oam-wellness-spa-by-oam-the-therapist-dubai-home-spa-and-massage-at-home-service-tcw8lzjq/packages?menu=true&pId=522208";
+const googleReviewsUrl = "https://www.google.com/search?q=Oam+The+Therapist+reviews";
 
 const treatments = [
   {
@@ -240,6 +241,7 @@ export default function Home() {
           <a href="#treatments" onClick={closeMenu}>Treatments</a>
           <a href="#pricing" onClick={closeMenu}>Packages</a>
           <a href="#ritual" onClick={closeMenu}>The OMM way</a>
+          <a href="#reviews" onClick={closeMenu}>Reviews</a>
           <a href="#training" onClick={closeMenu}>Training</a>
           <a href="#careers" onClick={closeMenu}>Careers</a>
           <a href="#contact" onClick={closeMenu}>Contact</a>
@@ -288,6 +290,25 @@ export default function Home() {
           <div className="intro-image-card">
             <img src="/manus-storage/omm-treatment_b59f9fd7.jpg" alt="Massage treatment in a softly lit spa setting" />
             <span>Healing begins within.</span>
+          </div>
+        </section>
+
+        <section className="reviews-section" id="reviews" aria-labelledby="reviews-title">
+          <div className="reviews-score">
+            <SectionLabel>From the people we serve</SectionLabel>
+            <div className="reviews-score__number">5.0</div>
+            <div className="reviews-score__stars" aria-label="5 out of 5 on Google">★★★★★</div>
+            <p>Google review summary<br /><strong>356 public reviews</strong></p>
+            <a className="text-link text-link--light" href={googleReviewsUrl} target="_blank" rel="noreferrer">Read the reviews on Google <ArrowUpRight size={15} /></a>
+          </div>
+          <div className="reviews-copy">
+            <SectionLabel>What keeps coming through</SectionLabel>
+            <h2 id="reviews-title">A calm space, <em>felt by others.</em></h2>
+            <p>Google’s public review panel highlights the same qualities OMM Wellness is built around: a welcoming home-service experience, professional therapists, and treatments that help people feel looked after.</p>
+            <div className="review-themes" aria-label="Public Google review themes">
+              <span>Home service</span><span>Professional therapist</span><span>Lymphatic drainage</span><span>Deep tissue massage</span><span>Hot stones</span>
+            </div>
+            <p className="reviews-source">Rating and themes sourced from the public Google Business profile for Oam the Therapist FZE. <a href={googleReviewsUrl} target="_blank" rel="noreferrer">Verify on Google ↗</a></p>
           </div>
         </section>
 
