@@ -68,3 +68,8 @@ Use an abstract, bold three-line “OMM” mark inspired by three stacked river 
 - Add a careers section for therapists and coordinators with a simple application action.
 - Do not invent customer testimonials, ratings, certifications, pricing, or outcomes. Where the existing site does not provide proof, use honest process language instead.
 - Instagram is linked as the visual journal and social proof destination; profile content is not embedded because public browsing is login-gated in the current environment.
+
+
+## Style Decisions — redesign
+
+The site has intentionally moved away from Warm Ritual House into **Mediterranean Signal**: bright mineral white and mist-blue surfaces, cobalt blue structure, citrus-lime conversion accents, and a sharper contemporary hospitality feel. Typography now pairs DM Serif Display with Manrope. Generated hero, treatment, training, careers, and abstract mark assets are used where available; the fallback treatment image replaces any failed generated placeholder. Preserve the architectural image frames, electric cobalt section breaks, citrus highlights, and direct booking-first composition in future revisions.

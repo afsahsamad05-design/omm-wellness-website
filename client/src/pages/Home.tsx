@@ -1,4 +1,4 @@
-/* Warm Ritual House: editorial wellness composition, tactile neutrals, charcoal ink, terracotta conversion cues. */
+/* Mediterranean Signal: editorial wellness composition, tactile neutrals, charcoal ink, terracotta conversion cues. */
 import { FormEvent, type ReactNode, useState } from "react";
 import {
   ArrowDownRight,
@@ -33,42 +33,42 @@ const treatments = [
     title: "Deep Tissue",
     detail:
       "Slow, sustained pressure for deeper muscular tension, recovery, and the places that need more focused attention.",
-    image: "/manus-storage/therapy-1_f6ef1ffc.jpg",
+    image: "/manus-storage/omm-treatment_b59f9fd7.jpg",
   },
   {
     number: "02",
     title: "Reflexology",
     detail:
       "A focused foot treatment tailored to your needs, designed to leave the whole body feeling lighter and renewed.",
-    image: "https://static.wixstatic.com/media/8985a267349f4964ae14b6619f590034.jpg/v1/fill/w_342,h_300,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/8985a267349f4964ae14b6619f590034.jpg",
+    image: "/manus-storage/omm-treatment_b59f9fd7.jpg",
   },
   {
     number: "03",
     title: "Hot Stone",
     detail:
       "Warm stones and flowing massage work together to soften tension and settle the nervous system.",
-    image: "https://static.wixstatic.com/media/52785d_02c971c2639342e9a3e4bc25233d9bad~mv2.jpeg/v1/fill/w_342,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/52785d_02c971c2639342e9a3e4bc25233d9bad~mv2.jpeg",
+    image: "/manus-storage/omm-hero_3526a111.jpg",
   },
   {
     number: "04",
     title: "Swedish",
     detail:
       "Classical strokes, kneading, gliding, and rhythmic movement for an unhurried reset.",
-    image: "https://static.wixstatic.com/media/52785d_82ac3f5ae883402898ac04f74f5869f9~mv2.jpg/v1/fill/w_342,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/52785d_82ac3f5ae883402898ac04f74f5869f9~mv2.jpg",
+    image: "/manus-storage/omm-careers_5e2a6e57.jpg",
   },
   {
     number: "05",
     title: "Trigger Point",
     detail:
       "Precise attention to constricted muscle areas that can refer discomfort elsewhere in the body.",
-    image: "https://static.wixstatic.com/media/8985a267349f4964ae14b6619f590034.jpg/v1/fill/w_342,h_300,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/8985a267349f4964ae14b6619f590034.jpg",
+    image: "/manus-storage/omm-treatment_b59f9fd7.jpg",
   },
   {
     number: "06",
     title: "Warrior Massage",
     detail:
       "A distinctive Thai and yoga-inspired combination of rhythmic oil massage, gentle stretching, and mindful movement.",
-    image: "/manus-storage/therapy-1_f6ef1ffc.jpg",
+    image: "/manus-storage/omm-treatment_b59f9fd7.jpg",
   },
 ];
 
@@ -128,9 +128,7 @@ const processSteps = [
 function BrandMark({ size = "normal" }: { size?: "normal" | "small" }) {
   return (
     <span className={`brand-glyph brand-glyph--${size}`} aria-hidden="true">
-      <i />
-      <i />
-      <i />
+      <img src="/manus-storage/omm-mark_b7cdb644.png" alt="" />
     </span>
   );
 }
@@ -252,9 +250,9 @@ export default function Home() {
       <main id="top">
         <section className="hero-section">
           <div className="hero-copy">
-            <SectionLabel>Private home spa · UAE</SectionLabel>
-            <h1>Your home,<br /><em>made restorative.</em></h1>
-            <p className="hero-lede">Therapist-led massage and spa rituals, brought to your door with care, discretion, and a little more room to breathe.</p>
+            <SectionLabel>Modern home wellness · UAE</SectionLabel>
+            <h1>Wellness,<br /><em>made personal.</em></h1>
+            <p className="hero-lede">Therapist-led massage, recovery, and spa rituals brought to your door with precision, warmth, and a clearer way to feel better.</p>
             <div className="hero-actions">
               <ButtonLink href={whatsappUrl("Hello, I would like to book a private OMM Wellness home spa session.")} variant="terracotta" external>Book your session</ButtonLink>
               <a className="text-link" href="#treatments">Explore treatments <ArrowDownRight size={16} /></a>
@@ -265,7 +263,7 @@ export default function Home() {
           </div>
           <div className="hero-visual">
             <div className="hero-image-wrap">
-              <img src="/manus-storage/hero_033b2763.jpg" alt="A calm home spa treatment setup with warm towels and massage stones" />
+              <img src="/manus-storage/omm-hero_3526a111.jpg" alt="A calm home spa treatment setup with warm towels and massage stones" />
               <div className="hero-stamp"><Sparkles size={15} /><span>Make space<br />for yourself.</span></div>
             </div>
             <div className="hero-note"><span>01</span><p>We bring the equipment.<br />You bring the right mood.</p></div>
@@ -281,14 +279,14 @@ export default function Home() {
         <section className="intro-section" id="ritual">
           <div className="intro-aside"><span>02</span><span className="vertical-rule" /><span>THE OMM WAY</span></div>
           <div className="intro-copy">
-            <SectionLabel>Home spa, reimagined</SectionLabel>
-            <h2>A private ritual for the way <em>you</em> actually live.</h2>
+            <SectionLabel>A better kind of appointment</SectionLabel>
+            <h2>Care that moves with <em>your life.</em></h2>
             <p>OMM Wellness brings a serene, considered spa experience into the place where you are most comfortable: home. Whether you are easing a demanding week, reconnecting with someone you love, or simply taking care of yourself, every session is shaped around your body and your moment.</p>
             <p>Our role is to guide the body back towards its own sense of balance with expert technique, a calm presence, and a treatment that feels personal from the first message to the final breath.</p>
             <a className="text-link text-link--terracotta" href={whatsappUrl("Hello, I would like help choosing the right OMM Wellness treatment for me.")} target="_blank" rel="noreferrer">Help me choose <MoveRight size={16} /></a>
           </div>
           <div className="intro-image-card">
-            <img src="https://static.wixstatic.com/media/2caa9a6524084b1c9ccbc1bdb398556f.jpg/v1/fill/w_342,h_300,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/2caa9a6524084b1c9ccbc1bdb398556f.jpg" alt="Massage treatment in a softly lit spa setting" />
+            <img src="/manus-storage/omm-treatment_b59f9fd7.jpg" alt="Massage treatment in a softly lit spa setting" />
             <span>Healing begins within.</span>
           </div>
         </section>
@@ -296,8 +294,8 @@ export default function Home() {
         <section className="treatments-section" id="treatments">
           <div className="section-heading-row">
             <div>
-              <SectionLabel>Choose your reset</SectionLabel>
-              <h2>Therapies with a <em>point of view.</em></h2>
+              <SectionLabel>Find your mode</SectionLabel>
+              <h2>Treatments with <em>clear intent.</em></h2>
             </div>
             <p>From deep release to quiet restoration, choose a treatment that meets you where you are. Not sure? Message us and we will help you find your fit.</p>
           </div>
@@ -363,7 +361,7 @@ export default function Home() {
         </section>
 
         <section className="training-section" id="training">
-          <div className="training-image"><img src="https://static.wixstatic.com/media/8985a267349f4964ae14b6619f590034.jpg/v1/fill/w_342,h_300,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/8985a267349f4964ae14b6619f590034.jpg" alt="Therapist training workshop with hands-on learning" /><span className="image-caption">OMM Training Studio · Learn with intention</span></div>
+          <div className="training-image"><img src="/manus-storage/omm-treatment_b59f9fd7.jpg" alt="Therapist training workshop with hands-on learning" /><span className="image-caption">OMM Training Studio · Learn with intention</span></div>
           <div className="training-copy">
             <SectionLabel>For the next generation of therapists</SectionLabel>
             <h2>Learn the craft.<br /><em>Carry it forward.</em></h2>
@@ -386,7 +384,7 @@ export default function Home() {
             <div className="role-list"><span>Massage therapists</span><span>Wellness trainees</span><span>Client coordinators</span></div>
             <a className="text-link text-link--terracotta" href={`mailto:${email}?subject=OMM%20Wellness%20Career%20Enquiry&body=Hello%20OMM%20Wellness,%0D%0A%0D%0AI%20would%20like%20to%20explore%20a%20career%20opportunity%20with%20your%20team.%0D%0A%0D%0AName:%0D%0ARole%20of%20interest:%0D%0APhone:%0D%0A`}>Send your interest <ArrowUpRight size={16} /></a>
           </div>
-          <div className="careers-image"><img src="https://static.wixstatic.com/media/52785d_82ac3f5ae883402898ac04f74f5869f9~mv2.jpg/v1/fill/w_342,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/52785d_82ac3f5ae883402898ac04f74f5869f9~mv2.jpg" alt="A wellness therapist standing beside a calm treatment space" /><div className="careers-image__note"><span>03</span><p>Bring your hands,<br />your heart, your standards.</p></div></div>
+          <div className="careers-image"><img src="/manus-storage/omm-careers_5e2a6e57.jpg" alt="A wellness therapist standing beside a calm treatment space" /><div className="careers-image__note"><span>03</span><p>Bring your hands,<br />your heart, your standards.</p></div></div>
         </section>
 
         <section className="contact-section" id="contact">
