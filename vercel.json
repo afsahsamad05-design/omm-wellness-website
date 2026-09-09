@@ -1,8 +1,4 @@
 {
-  "build": {
-    "root": "client"
-  }
+  "root": "client"
 }
-
-
 
