@@ -28,10 +28,13 @@ const freshaGroupUrl = "https://www.fresha.com/a/oam-wellness-spa-by-oam-the-the
 const freshaPackagesUrl = "https://www.fresha.com/a/oam-wellness-spa-by-oam-the-therapist-dubai-home-spa-and-massage-at-home-service-tcw8lzjq/packages?menu=true&pId=522208";
 const googleReviewsUrl = "https://www.google.com/search?q=Oam+The+Therapist+reviews";
 
+type ServiceFilter = "all" | "massage" | "spa" | "training";
+
 const treatments = [
   {
     number: "01",
     title: "Deep Tissue",
+    category: "massage" as const,
     detail:
       "Slow, sustained pressure for deeper muscular tension, recovery, and the places that need more focused attention.",
     image: "/manus-storage/omm-deep-tissue_caf6d826.jpg",
@@ -39,6 +42,7 @@ const treatments = [
   {
     number: "02",
     title: "Reflexology",
+    category: "spa" as const,
     detail:
       "A focused foot treatment tailored to your needs, designed to leave the whole body feeling lighter and renewed.",
     image: "/manus-storage/omm-reflexology_b5ac1d1b.jpg",
@@ -46,6 +50,7 @@ const treatments = [
   {
     number: "03",
     title: "Hot Stone",
+    category: "spa" as const,
     detail:
       "Warm stones and flowing massage work together to soften tension and settle the nervous system.",
     image: "/manus-storage/omm-hot-stone_6d8a6ce8.jpg",
@@ -53,6 +58,7 @@ const treatments = [
   {
     number: "04",
     title: "Swedish",
+    category: "massage" as const,
     detail:
       "Classical strokes, kneading, gliding, and rhythmic movement for an unhurried reset.",
     image: "/manus-storage/omm-swedish-corrected_c7727f6a.jpg",
@@ -60,6 +66,7 @@ const treatments = [
   {
     number: "05",
     title: "Trigger Point",
+    category: "massage" as const,
     detail:
       "Precise attention to constricted muscle areas that can refer discomfort elsewhere in the body.",
     image: "/manus-storage/omm-trigger-point_541540e4.jpg",
@@ -67,6 +74,7 @@ const treatments = [
   {
     number: "06",
     title: "Warrior Massage",
+    category: "massage" as const,
     detail:
       "A distinctive Thai and yoga-inspired combination of rhythmic oil massage, gentle stretching, and mindful movement.",
     image: "/manus-storage/omm-warrior_3560c0eb.jpg",
@@ -212,8 +220,12 @@ function BookingForm() {
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeFilter, setActiveFilter] = useState<ServiceFilter>("all");
 
   const closeMenu = () => setMenuOpen(false);
+  const visibleTreatments = activeFilter === "all" || activeFilter === "training"
+    ? treatments
+    : treatments.filter((treatment) => treatment.category === activeFilter);
 
   return (
     <div className="site-shell">
@@ -320,18 +332,51 @@ export default function Home() {
             </div>
             <p>From deep release to quiet restoration, choose a treatment that meets you where you are. Not sure? Message us and we will help you find your fit.</p>
           </div>
-          <div className="treatment-list">
-            {treatments.map((treatment) => (
-              <article className="treatment-card" key={treatment.title}>
-                <div className="treatment-card__image"><img src={treatment.image} alt={`${treatment.title} treatment atmosphere`} /></div>
-                <div className="treatment-card__content">
-                  <div className="treatment-card__meta"><span>{treatment.number}</span><ArrowUpRight size={17} /></div>
-                  <h3>{treatment.title}</h3>
-                  <p>{treatment.detail}</p>
-                  <a href={whatsappUrl(`Hello, I would like to enquire about ${treatment.title}. Please share the details.`)} target="_blank" rel="noreferrer">Enquire about this treatment <MoveRight size={15} /></a>
-                </div>
-              </article>
+          <div className="service-filter" role="tablist" aria-label="Explore OMM Wellness categories">
+            {([
+              ["all", "All services"],
+              ["massage", "Massages"],
+              ["spa", "Spa treatments"],
+              ["training", "Training courses"],
+            ] as const).map(([value, label]) => (
+              <button
+                key={value}
+                className={`service-filter__button ${activeFilter === value ? "is-active" : ""}`}
+                type="button"
+                role="tab"
+                aria-selected={activeFilter === value}
+                onClick={() => setActiveFilter(value)}
+              >
+                {label}<ArrowUpRight size={14} />
+              </button>
             ))}
+          </div>
+          <div className={`service-results ${activeFilter === "training" ? "service-results--training" : ""}`} aria-live="polite">
+            {activeFilter === "training" ? (
+              <article className="training-filter-card">
+                <div className="training-filter-card__index">03</div>
+                <div>
+                  <SectionLabel>Learn with OMM</SectionLabel>
+                  <h3>Therapist training <em>with intention.</em></h3>
+                  <p>A practical pathway for candidates who want to build skill, presence, and a meaningful career in therapeutic wellness.</p>
+                </div>
+                <a className="button button--dark" href="#training">Explore the course <ArrowUpRight size={15} /></a>
+              </article>
+            ) : (
+              <div className="treatment-list">
+                {visibleTreatments.map((treatment) => (
+                  <article className="treatment-card" key={treatment.title}>
+                    <div className="treatment-card__image"><img src={treatment.image} alt={`${treatment.title} treatment atmosphere`} /></div>
+                    <div className="treatment-card__content">
+                      <div className="treatment-card__meta"><span>{treatment.number}</span><ArrowUpRight size={17} /></div>
+                      <h3>{treatment.title}</h3>
+                      <p>{treatment.detail}</p>
+                      <a href={whatsappUrl(`Hello, I would like to enquire about ${treatment.title}. Please share the details.`)} target="_blank" rel="noreferrer">Enquire about this treatment <MoveRight size={15} /></a>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            )}
           </div>
         </section>
 
