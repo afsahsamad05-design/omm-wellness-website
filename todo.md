@@ -1,8 +1,8 @@
-# Google Reviews-style section
+# Missing service content and hover navigation
 
-- [x] Verify which rating, reviewer names, excerpts, and source links can be safely reproduced from the public review material.
-- [x] Define an Oam-branded review layout with a Google CTA and honest source note.
-- [x] Add only verified review content or live-profile links; do not invent testimonials.
-- [x] Implement responsive review cards, rating summary, and “View more” action.
-- [x] Run type/build checks and desktop/mobile visual verification.
-- [ ] Save a new checkpoint and deliver the review presentation update.
+- [x] Add missing home-spa overview, benefits, expert-care, and expanded service-category content.
+- [x] Add Lymphatic Drainage, Madero Therapy, Signature Therapy, Pregnancy Care, and Other Services with honest service descriptions and enquiry actions.
+- [x] Convert desktop header navigation into hover/focus preview menus with visible sublinks and summaries.
+- [x] Preserve mobile navigation behavior and keep keyboard focus paths accessible.
+- [x] Run type/build checks and verify desktop/mobile content and hover/focus states.
+- [ ] Save a new checkpoint and deliver the update.

@@ -35,6 +35,20 @@ const publicReviewers = [
   { name: "Oam The Therapist guests", note: "356 public reviews on Google" },
 ];
 
+const homeSpaBenefits = [
+  ["Expert care, wherever you are", "Skilled therapists arrive at your home so you can relax, recover, and receive care without a commute."],
+  ["Bespoke and personalised", "Every session is shaped around your needs, preferred pressure, timing, and the space you feel most comfortable in."],
+  ["Privacy meets wellbeing", "A private home setting gives you room to slow down, reconnect, and make the appointment entirely yours."],
+];
+
+const additionalServices = [
+  { title: "Lymphatic Drainage", detail: "A gentle, rhythm-led treatment designed around light touch, relaxation, and a considered sense of ease." },
+  { title: "Madero Therapy", detail: "A distinctive wood-tool body treatment delivered with careful technique and a tailored consultation." },
+  { title: "Signature Therapy", detail: "A personalised blend of techniques selected around how your body feels on the day." },
+  { title: "Pregnancy Care", detail: "A comfort-first treatment conversation for expecting clients, with positioning and pressure discussed before the session." },
+  { title: "Other Services", detail: "Have something specific in mind? Tell us what you need and the team will guide you to the right option." },
+];
+
 type ServiceFilter = "all" | "massage" | "spa" | "training";
 
 const treatments = [
@@ -256,14 +270,53 @@ export default function Home() {
         <button className="mobile-menu-button" onClick={() => setMenuOpen((open) => !open)} aria-label={menuOpen ? "Close menu" : "Open menu"}>
           {menuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
-        <nav className={`site-nav ${menuOpen ? "site-nav--open" : ""}`}>
-          <a href="#treatments" onClick={closeMenu}>Treatments</a>
-          <a href="#pricing" onClick={closeMenu}>Packages</a>
-          <a href="#ritual" onClick={closeMenu}>The OMM way</a>
-          <a href="#reviews" onClick={closeMenu}>Reviews</a>
-          <a href="#training" onClick={closeMenu}>Training</a>
-          <a href="#careers" onClick={closeMenu}>Careers</a>
-          <a href="#contact" onClick={closeMenu}>Contact</a>
+        <nav className={`site-nav ${menuOpen ? "site-nav--open" : ""}`} aria-label="Primary navigation">
+          <div className="nav-preview">
+            <a className="nav-preview__trigger" href="#treatments" onClick={closeMenu}>Treatments <ChevronDown size={12} /></a>
+            <div className="nav-preview__panel">
+              <span>Home SPA Services</span>
+              <a href="#treatments" onClick={closeMenu}>Massages</a>
+              <a href="#extended-services" onClick={closeMenu}>Lymphatic Drainage</a>
+              <a href="#extended-services" onClick={closeMenu}>Madero Therapy</a>
+              <a href="#extended-services" onClick={closeMenu}>Signature Therapy</a>
+            </div>
+          </div>
+          <div className="nav-preview">
+            <a className="nav-preview__trigger" href="#pricing" onClick={closeMenu}>Packages <ChevronDown size={12} /></a>
+            <div className="nav-preview__panel">
+              <span>Choose your rhythm</span>
+              <a href="#pricing" onClick={closeMenu}>Essential Reset</a>
+              <a href="#pricing" onClick={closeMenu}>Deep Restore</a>
+              <a href="#pricing" onClick={closeMenu}>Ritual for Two</a>
+              <a href="#pricing" onClick={closeMenu}>Monthly Balance</a>
+            </div>
+          </div>
+          <div className="nav-preview">
+            <a className="nav-preview__trigger" href="#ritual" onClick={closeMenu}>The OMM way <ChevronDown size={12} /></a>
+            <div className="nav-preview__panel nav-preview__panel--wide">
+              <span>Balance | Life | Freedom</span>
+              <p>Private home wellness, thoughtful care, and a treatment shaped around your moment.</p>
+              <a href="#ritual" onClick={closeMenu}>Read our approach <ArrowUpRight size={13} /></a>
+            </div>
+          </div>
+          <div className="nav-preview">
+            <a className="nav-preview__trigger" href="#reviews" onClick={closeMenu}>Reviews <ChevronDown size={12} /></a>
+            <div className="nav-preview__panel nav-preview__panel--wide">
+              <span>What our clients think</span>
+              <p>See the public Google rating, reviewer profiles, and the original review source.</p>
+              <a href="#reviews" onClick={closeMenu}>View reviews <ArrowUpRight size={13} /></a>
+            </div>
+          </div>
+          <div className="nav-preview">
+            <a className="nav-preview__trigger" href="#training" onClick={closeMenu}>Training <ChevronDown size={12} /></a>
+            <div className="nav-preview__panel nav-preview__panel--wide">
+              <span>Learn the craft</span>
+              <p>Technique-led training for candidates building a meaningful wellness career.</p>
+              <a href="#training" onClick={closeMenu}>Request the syllabus <ArrowUpRight size={13} /></a>
+            </div>
+          </div>
+          <div className="nav-preview nav-preview--simple"><a className="nav-preview__trigger" href="#careers" onClick={closeMenu}>Careers</a></div>
+          <div className="nav-preview nav-preview--simple"><a className="nav-preview__trigger" href="#contact" onClick={closeMenu}>Contact</a></div>
           <ButtonLink href={whatsappUrl("Hello, I would like to book an OMM Wellness home spa session.")} variant="dark" external>Book on WhatsApp</ButtonLink>
         </nav>
       </header>
@@ -309,6 +362,25 @@ export default function Home() {
           <div className="intro-image-card">
             <img src="/manus-storage/omm-treatment_b59f9fd7.jpg" alt="Massage treatment in a softly lit spa setting" />
             <span>Healing begins within.</span>
+          </div>
+        </section>
+
+        <section className="home-services-section" id="home-services" aria-labelledby="home-services-title">
+          <div className="home-services-copy">
+            <SectionLabel>Home SPA Services</SectionLabel>
+            <h2 id="home-services-title">A private spa, <em>wherever you are.</em></h2>
+            <p>Oam The Therapist brings personalised massage treatments to the comfort of your home, so you can relax, recover, and reconnect without the stress of travelling to a spa.</p>
+            <p>From a single restorative session to a thoughtful treatment plan, our therapists create a safe, serene atmosphere around your needs and your time.</p>
+            <a className="text-link text-link--terracotta" href="#treatments">Explore massage services <MoveRight size={16} /></a>
+          </div>
+          <div className="home-services-benefits">
+            <p className="benefits-kicker">Benefits of massage at home</p>
+            {homeSpaBenefits.map(([title, detail], index) => (
+              <article className="benefit-row" key={title}>
+                <span>0{index + 1}</span>
+                <div><h3>{title}</h3><p>{detail}</p></div>
+              </article>
+            ))}
           </div>
         </section>
 
@@ -394,6 +466,23 @@ export default function Home() {
                 ))}
               </div>
             )}
+          </div>
+        </section>
+
+        <section className="extended-services-section" id="extended-services" aria-labelledby="extended-services-title">
+          <div className="extended-services-heading">
+            <SectionLabel>More ways to feel looked after</SectionLabel>
+            <h2 id="extended-services-title">Services beyond <em>the classic massage.</em></h2>
+            <p>Explore additional care options and tell us what your body, schedule, or occasion calls for. We will help you find the right starting point.</p>
+          </div>
+          <div className="extended-services-list">
+            {additionalServices.map((service, index) => (
+              <article className="extended-service-row" key={service.title}>
+                <span>0{index + 1}</span>
+                <div><h3>{service.title}</h3><p>{service.detail}</p></div>
+                <a href={whatsappUrl(`Hello, I would like to enquire about ${service.title}. Please share the details.`)} target="_blank" rel="noreferrer" aria-label={`Enquire about ${service.title}`}><ArrowUpRight size={17} /></a>
+              </article>
+            ))}
           </div>
         </section>
 
