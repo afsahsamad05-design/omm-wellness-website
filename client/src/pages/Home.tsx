@@ -137,7 +137,7 @@ const processSteps = [
 function BrandMark({ size = "normal" }: { size?: "normal" | "small" }) {
   return (
     <span className={`brand-glyph brand-glyph--${size}`} aria-hidden="true">
-      <img src="/manus-storage/omm-mark_b7cdb644.png" alt="" />
+      <img src="/manus-storage/oam-original-logo_0b93830f.webp" alt="" />
     </span>
   );
 }
@@ -239,11 +239,11 @@ export default function Home() {
       </div>
 
       <header className="site-header">
-        <a href="#top" className="brand-lockup" aria-label="OMM Wellness home">
+        <a href="#top" className="brand-lockup" aria-label="Oam The Therapist home">
           <BrandMark />
           <span>
-            <strong>OMM</strong>
-            <small>WELLNESS · THE THERAPIST & SPA</small>
+            <strong>Oam The Therapist</strong>
+            <small>Balance | Life | Freedom</small>
           </span>
         </a>
         <button className="mobile-menu-button" onClick={() => setMenuOpen((open) => !open)} aria-label={menuOpen ? "Close menu" : "Open menu"}>
@@ -459,7 +459,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="site-footer"><a href="#top" className="footer-brand"><BrandMark size="small" /><span>OMM WELLNESS</span></a><span>Balance · Life · Freedom</span><span>© {new Date().getFullYear()} OMM Wellness. Home SPA and massage at home service in the UAE.</span></footer>
+      <footer className="site-footer"><a href="#top" className="footer-brand"><BrandMark size="small" /><span>Oam The Therapist</span></a><span>Balance | Life | Freedom</span><span>© {new Date().getFullYear()} Oam The Therapist. Home SPA and massage at home service in the UAE.</span></footer>
 
       <a className="floating-whatsapp" href={whatsappUrl("Hello, I would like to book an OMM Wellness session.")} target="_blank" rel="noreferrer" aria-label="Book on WhatsApp"><MessageCircle size={19} /><span>Book on WhatsApp</span></a>
     </div>

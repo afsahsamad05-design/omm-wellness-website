@@ -73,3 +73,8 @@ Use an abstract, bold three-line “OMM” mark inspired by three stacked river 
 ## Style Decisions — redesign
 
 The site has intentionally moved away from Warm Ritual House into **Mediterranean Signal**: bright mineral white and mist-blue surfaces, cobalt blue structure, citrus-lime conversion accents, and a sharper contemporary hospitality feel. Typography now pairs DM Serif Display with Manrope. Generated hero, treatment, training, careers, and abstract mark assets are used where available; the fallback treatment image replaces any failed generated placeholder. Preserve the architectural image frames, electric cobalt section breaks, citrus highlights, and direct booking-first composition in future revisions.
+
+
+## Style Decisions — Original Oam Identity
+
+The website now follows the original Oam The Therapist reference: the verified olive circular OAM logo is the primary brand mark; the palette uses olive, charcoal, white, soft gold, and warm clay; typography pairs an elegant italic Cormorant Garamond display face with a restrained DM Sans body face; and the recurring signature is “Balance | Life | Freedom.” The visual system intentionally replaces the previous cobalt-and-lime direction so the logo and interface read as one coherent brand.
