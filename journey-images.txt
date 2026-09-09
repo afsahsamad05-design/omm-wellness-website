@@ -1,0 +1,24 @@
+ALT: 34fe88e6-80b9-4e4a-abeb-0b5e449dd846.JPG
+SRC: https://static.wixstatic.com/media/52785d_081854a0681348c696e63a4678a08995~mv2.jpg/v1/crop/x_161,y_161,w_1278,h_1278/fill/w_130,h_130,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/34fe88e6-80b9-4e4a-abeb-0b5e449dd846_JPG.jpg
+
+ALT: WhatsApp Image 2026-03-30 at 5.50.08 PM.jpeg
+SRC: https://static.wixstatic.com/media/52785d_fe63f482a02e45f1bd9bcd9ae468c69e~mv2.jpeg/v1/crop/x_0,y_64,w_853,h_845/fill/w_345,h_342,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/WhatsApp%20Image%202026-03-30%20at%205_50_08%20PM.jpeg
+
+ALT: 
+SRC: https://static.wixstatic.com/media/52785d_09071952784141819542a9a59f423bf2~mv2.jpeg/v1/fill/w_269,h_359,fp_0.54_0.33,q_90,enc_avif,quality_auto/52785d_09071952784141819542a9a59f423bf2~mv2.jpeg
+
+ALT: 
+SRC: https://static.wixstatic.com/media/52785d_1d8eda5261e142b4a4426004d19bd7c7~mv2.jpg/v1/fill/w_269,h_359,q_90,enc_avif,quality_auto/52785d_1d8eda5261e142b4a4426004d19bd7c7~mv2.jpg
+
+ALT: whatsapp_Icon
+SRC: https://static.wixstatic.com/media/52785d_fcfc102e405247d1915a5aac2b193f79~mv2.png/v1/fill/w_40,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/52785d_fcfc102e405247d1915a5aac2b193f79~mv2.png
+
+ALT: Facebook_Icon
+SRC: https://static.wixstatic.com/media/e316f544f9094143b9eac01f1f19e697.png/v1/fill/w_40,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e316f544f9094143b9eac01f1f19e697.png
+
+ALT: Instagram_Icon
+SRC: https://static.wixstatic.com/media/9f9c321c774844b793180620472aa4f1.png/v1/fill/w_40,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9f9c321c774844b793180620472aa4f1.png
+
+ALT: email_icon
+SRC: https://static.wixstatic.com/media/52785d_3d2efc59c61c4a08a72350c720c3acc5~mv2.png/v1/fill/w_40,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/52785d_3d2efc59c61c4a08a72350c720c3acc5~mv2.png
+

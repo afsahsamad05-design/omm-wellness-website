@@ -1,8 +1,10 @@
-# Missing service content and hover navigation
+# Oam journey and certification update
 
-- [x] Add missing home-spa overview, benefits, expert-care, and expanded service-category content.
-- [x] Add Lymphatic Drainage, Madero Therapy, Signature Therapy, Pregnancy Care, and Other Services with honest service descriptions and enquiry actions.
-- [x] Convert desktop header navigation into hover/focus preview menus with visible sublinks and summaries.
-- [x] Preserve mobile navigation behavior and keep keyboard focus paths accessible.
-- [x] Run type/build checks and verify desktop/mobile content and hover/focus states.
+- [x] Inspect the provided Oam The Therapist journey page and verify its identity and content.
+- [x] Capture the exact journey and certification wording needed for the new section.
+- [x] Collect the exact source photo URLs or saved copies used on the source page.
+- [x] Upload/reuse the approved photos through the web asset workflow.
+- [x] Add journey and certification sections with source-accurate copy and imagery.
+- [x] Add navigation access without breaking the existing hover/focus preview menus.
+- [x] Run type/build checks and verify desktop/mobile rendering.
 - [ ] Save a new checkpoint and deliver the update.

@@ -130,6 +130,28 @@ h2 { margin-bottom: 24px; font-size: clamp(48px,5.3vw,78px); line-height: .94; }
 .intro-image-card img { display: block; width: 100%; aspect-ratio: .88; object-fit: cover; }
 .intro-image-card span { position: absolute; bottom: -25px; left: -18px; padding: 12px 15px; color: var(--ink); background: var(--lime); font-family: var(--font-display); font-size: 19px; font-style: italic; transform: rotate(5deg); }
 
+.journey-section { padding: 132px 9vw; display: grid; grid-template-columns: .78fr 1.22fr; gap: 10vw; align-items: center; background: var(--white); }
+.journey-image-column { position: relative; max-width: 390px; padding-bottom: 28px; }
+.journey-portrait { margin: 0; padding: 13px; background: var(--paper); transform: rotate(-2deg); box-shadow: 15px 15px 0 var(--blue); }
+.journey-portrait img { display: block; width: 100%; aspect-ratio: 1 / 1.08; object-fit: cover; }
+.journey-stat { position: absolute; right: -34px; bottom: 0; padding: 17px 20px; display: flex; align-items: baseline; gap: 10px; color: var(--ink); background: var(--lime); box-shadow: 8px 8px 0 var(--orange); }
+.journey-stat strong { font-family: var(--font-display); font-size: 42px; font-style: italic; font-weight: 500; line-height: 1; }
+.journey-stat span { font-size: 9px; font-weight: 800; line-height: 1.45; letter-spacing: .07em; text-transform: uppercase; }
+.journey-copy { max-width: 680px; }
+.journey-copy > p { color: var(--ink-soft); line-height: 1.85; }
+
+.certifications-section { padding: 126px 7vw; display: grid; grid-template-columns: .8fr 1.2fr; gap: 9vw; color: var(--white); background: var(--blue-deep); }
+.certifications-section .section-label { color: var(--lime); }
+.certifications-section h2 { color: var(--white); }
+.certifications-section h2 em { color: var(--lime); }
+.certifications-heading > p { max-width: 420px; color: rgba(251,250,245,.74); line-height: 1.85; }
+.certification-images { margin-top: 30px; display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; }
+.certification-images img { width: 100%; aspect-ratio: .75; object-fit: cover; border: 8px solid rgba(251,250,245,.15); }
+.certification-list { border-top: 1px solid rgba(251,250,245,.26); }
+.certification-row { padding: 15px 0; display: grid; grid-template-columns: 35px 1fr; gap: 12px; border-bottom: 1px solid rgba(251,250,245,.2); }
+.certification-row span { color: var(--lime); font-size: 10px; font-weight: 800; letter-spacing: .1em; }
+.certification-row p { margin: 0; color: rgba(251,250,245,.85); font-size: 12px; line-height: 1.55; }
+
 .home-services-section { padding: 124px 9vw 128px; display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 10vw; align-items: start; background: var(--white); }
 .home-services-copy { max-width: 590px; }
 .home-services-copy > p { max-width: 540px; color: var(--ink-soft); line-height: 1.9; }
@@ -338,6 +360,9 @@ h2 { margin-bottom: 24px; font-size: clamp(48px,5.3vw,78px); line-height: .94; }
   .proof-strip > div { justify-content: flex-start; }
   .intro-section,.process-section,.training-section,.careers-section,.contact-section { padding: 92px 7vw; }
   .intro-section { grid-template-columns: 1fr; gap: 39px; }
+  .journey-section { padding: 92px 7vw; grid-template-columns: 1fr; gap: 50px; }
+  .journey-image-column { max-width: 430px; }
+  .certifications-section { padding: 92px 7vw; grid-template-columns: 1fr; gap: 50px; }
   .home-services-section { padding: 92px 7vw; grid-template-columns: 1fr; gap: 48px; }
   .home-services-benefits { padding: 0; border-left: 0; }
   .extended-services-section { padding: 92px 7vw; grid-template-columns: 1fr; gap: 48px; }
@@ -379,6 +404,13 @@ h2 { margin-bottom: 24px; font-size: clamp(48px,5.3vw,78px); line-height: .94; }
   .hero-stamp { right: 15px; bottom: 15px; width: 92px; height: 92px; font-size: 9px; }
   .hero-note { bottom: -54px; max-width: 165px; padding: 14px; }
   .service-filter { margin-top: -22px; }
+  .journey-section { padding-top: 78px; padding-bottom: 88px; }
+  .journey-stat { right: -12px; padding: 13px 15px; }
+  .journey-stat strong { font-size: 34px; }
+  .certifications-section { padding-top: 80px; padding-bottom: 88px; }
+  .certification-images { gap: 8px; }
+  .certification-images img { border-width: 5px; }
+  .certification-row { grid-template-columns: 28px 1fr; gap: 8px; }
   .home-services-section { padding-top: 78px; padding-bottom: 84px; }
   .benefit-row { grid-template-columns: 30px 1fr; gap: 11px; }
   .benefit-row h3,.extended-service-row h3 { font-size: 23px; }

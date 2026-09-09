@@ -41,6 +41,28 @@ const homeSpaBenefits = [
   ["Privacy meets wellbeing", "A private home setting gives you room to slow down, reconnect, and make the appointment entirely yours."],
 ];
 
+const certificationItems = [
+  "Anatomy and Physiology Training for 60 hrs",
+  "Slimming Body Massage training from Pravinia",
+  "Thai Yoga Massage Stretching",
+  "Certificate of Excellence in Madero Therapy",
+  "Thai Warrior Massage, 60 hours intensive training from Mr. Pathompon Aiyarattanaruk (Jack Sharman), initiator of warrior massage in Thailand",
+  "Sport Massage Training, 60 hours, from Supakorn and Body SPA",
+  "Human Capital Development Center / Performance Development Course by Govt of Thailand",
+  "The Union of Thai Traditional Medicine Society, Thai Massage 150 hrs",
+  "The Union of Thai Traditional Medicine Society, Foot Massage 60 hrs",
+  "The Union of Thai Traditional Medicine Society, Oil Massage 60 hrs",
+  "Department of Skill Development Ministry of Labour / Course in Holistic Health Promotion Therapist 240 hrs",
+  "Department of Skill Development Ministry of Labour / Course in Wellness & Spa Management Technique 36 hrs",
+  "Lampang Regional for Skill Development, National Skill Standard Test in Holistic health promotion therapist Western Spa (Massage therapy) Level 1",
+  "Department of Skill Development Ministry of Labour / Course in Luk pra kob with Hot Oil Massage Technique 30 hrs",
+  "Department of Skill Development Ministry of Labour / Course in Thai Aromatic Massage Technique 30 hrs",
+  "Department of Skill Development Ministry of Labour / Course in Hot stone Massage Technique 18 hrs",
+  "The Union of Thai Traditional Medicine Society, Puerperium Care Course 30 hrs",
+  "Department of Skill Development Ministry of Labour / Course in Detoxifying Massage Technique 18 hrs",
+  "The Union of Thai Traditional Medicine Society, V shape for Lifting and Wrinkle-Removers Massage (60 Hours)",
+];
+
 const additionalServices = [
   { title: "Lymphatic Drainage", detail: "A gentle, rhythm-led treatment designed around light touch, relaxation, and a considered sense of ease." },
   { title: "Madero Therapy", detail: "A distinctive wood-tool body treatment delivered with careful technique and a tailored consultation." },
@@ -295,8 +317,9 @@ export default function Home() {
             <a className="nav-preview__trigger" href="#ritual" onClick={closeMenu}>The OMM way <ChevronDown size={12} /></a>
             <div className="nav-preview__panel nav-preview__panel--wide">
               <span>Balance | Life | Freedom</span>
-              <p>Private home wellness, thoughtful care, and a treatment shaped around your moment.</p>
-              <a href="#ritual" onClick={closeMenu}>Read our approach <ArrowUpRight size={13} /></a>
+              <p>The founder journey, holistic philosophy, and certification depth behind every treatment.</p>
+              <a href="#journey" onClick={closeMenu}>Read the journey <ArrowUpRight size={13} /></a>
+              <a href="#certifications" onClick={closeMenu}>View certifications <ArrowUpRight size={13} /></a>
             </div>
           </div>
           <div className="nav-preview">
@@ -362,6 +385,38 @@ export default function Home() {
           <div className="intro-image-card">
             <img src="/manus-storage/omm-treatment_b59f9fd7.jpg" alt="Massage treatment in a softly lit spa setting" />
             <span>Healing begins within.</span>
+          </div>
+        </section>
+
+        <section className="journey-section" id="journey" aria-labelledby="journey-title">
+          <div className="journey-image-column">
+            <figure className="journey-portrait"><img src="/manus-storage/founder-portrait_30b8205f.jpeg" alt="Oam The Therapist founder portrait from the original Oam journey page" /></figure>
+            <div className="journey-stat"><strong>22+</strong><span>years in natural therapies<br />and rehabilitation</span></div>
+          </div>
+          <div className="journey-copy">
+            <SectionLabel>Who I am and what I do</SectionLabel>
+            <h2 id="journey-title">My journey toward <em>balance.</em></h2>
+            <p>With over 22 years of experience in natural therapies and rehabilitation, complemented by more than 1600 hours of professional certified training and over eight years of clinical practice in the UAE, I have developed a deep and well-rounded understanding of holistic health and alternative medicine.</p>
+            <p>Throughout my career, I have cultivated core values that form the foundation of my practice—integrity, compassion, and a genuine commitment to each individual’s wellbeing. I believe that true healing goes beyond treating symptoms; it involves understanding the root causes of imbalance and supporting the body’s natural ability to restore itself.</p>
+            <p>I am deeply passionate about educating and empowering individuals to take an active role in their health. By combining traditional knowledge with modern therapeutic practices, I aim to create sustainable, long-term improvements in physical, mental, and emotional wellbeing.</p>
+            <p>My mission is not only to heal but to inspire lasting lifestyle changes that support overall wellness and vitality.</p>
+          </div>
+        </section>
+
+        <section className="certifications-section" id="certifications" aria-labelledby="certifications-title">
+          <div className="certifications-heading">
+            <SectionLabel>My certifications</SectionLabel>
+            <h2 id="certifications-title">Training with <em>depth.</em></h2>
+            <p>More than 1600 hours of professional certified training support a practice grounded in technique, traditional knowledge, and ongoing learning.</p>
+            <div className="certification-images">
+              <img src="/manus-storage/certification-1_713187ca.jpeg" alt="Original Oam certification image" />
+              <img src="/manus-storage/certification-2_8d885211.jpg" alt="Original Oam training and certification image" />
+            </div>
+          </div>
+          <div className="certification-list">
+            {certificationItems.map((item, index) => (
+              <div className="certification-row" key={`${item}-${index}`}><span>{String(index + 1).padStart(2, "0")}</span><p>{item}</p></div>
+            ))}
           </div>
         </section>
 
