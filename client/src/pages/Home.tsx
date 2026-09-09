@@ -28,6 +28,13 @@ const freshaGroupUrl = "https://www.fresha.com/a/oam-wellness-spa-by-oam-the-the
 const freshaPackagesUrl = "https://www.fresha.com/a/oam-wellness-spa-by-oam-the-therapist-dubai-home-spa-and-massage-at-home-service-tcw8lzjq/packages?menu=true&pId=522208";
 const googleReviewsUrl = "https://www.google.com/search?q=Oam+The+Therapist+reviews";
 
+const publicReviewers = [
+  { name: "Manee Dannok", note: "Public Google review · Local Guide" },
+  { name: "Thanya CW", note: "Public Google review" },
+  { name: "abrar alnaqbi", note: "Public Google review" },
+  { name: "Oam The Therapist guests", note: "356 public reviews on Google" },
+];
+
 type ServiceFilter = "all" | "massage" | "spa" | "training";
 
 const treatments = [
@@ -306,22 +313,32 @@ export default function Home() {
         </section>
 
         <section className="reviews-section" id="reviews" aria-labelledby="reviews-title">
+          <div className="reviews-intro">
+            <SectionLabel>Google Reviews</SectionLabel>
+            <h2 id="reviews-title">What our clients <em>think about us.</em></h2>
+            <p>If you have visited Oam The Therapist, we would love to hear about your experience. Read the original reviews or leave your own directly on Google.</p>
+            <a className="google-review-button" href={googleReviewsUrl} target="_blank" rel="noreferrer"><span className="google-g">G</span><span>Leave a review on Google</span><ArrowUpRight size={15} /></a>
+          </div>
           <div className="reviews-score">
-            <SectionLabel>From the people we serve</SectionLabel>
+            <span className="google-wordmark">Google Reviews</span>
             <div className="reviews-score__number">5.0</div>
             <div className="reviews-score__stars" aria-label="5 out of 5 on Google">★★★★★</div>
-            <p>Google review summary<br /><strong>356 public reviews</strong></p>
-            <a className="text-link text-link--light" href={googleReviewsUrl} target="_blank" rel="noreferrer">Read the reviews on Google <ArrowUpRight size={15} /></a>
+            <p><strong>356 public reviews</strong><br />Verified on the public Google Business profile</p>
           </div>
-          <div className="reviews-copy">
-            <SectionLabel>What keeps coming through</SectionLabel>
-            <h2 id="reviews-title">A calm space, <em>felt by others.</em></h2>
-            <p>Google’s public review panel highlights the same qualities OMM Wellness is built around: a welcoming home-service experience, professional therapists, and treatments that help people feel looked after.</p>
-            <div className="review-themes" aria-label="Public Google review themes">
-              <span>Home service</span><span>Professional therapist</span><span>Lymphatic drainage</span><span>Deep tissue massage</span><span>Hot stones</span>
-            </div>
-            <p className="reviews-source">Rating and themes sourced from the public Google Business profile for Oam the Therapist FZE. <a href={googleReviewsUrl} target="_blank" rel="noreferrer">Verify on Google ↗</a></p>
+          <div className="review-wall" aria-label="Public Google review profiles">
+            {publicReviewers.map((reviewer) => (
+              <article className="review-card" key={reviewer.name}>
+                <div className="review-card__avatar" aria-hidden="true">{reviewer.name.charAt(0).toUpperCase()}</div>
+                <div className="review-card__body">
+                  <div className="review-card__head"><strong>{reviewer.name}</strong><span>★★★★★</span></div>
+                  <small>{reviewer.note}</small>
+                  <p>Read the original customer review on Google.</p>
+                  <a href={googleReviewsUrl} target="_blank" rel="noreferrer">Open on Google <ArrowUpRight size={13} /></a>
+                </div>
+              </article>
+            ))}
           </div>
+          <p className="reviews-source">Reviewer names, rating, and review count are presented from the public Google Business profile for Oam the Therapist FZE. Full review text remains on Google so every customer statement stays original and verifiable. <a href={googleReviewsUrl} target="_blank" rel="noreferrer">View more ↗</a></p>
         </section>
 
         <section className="treatments-section" id="treatments">
