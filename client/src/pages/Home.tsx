@@ -55,7 +55,7 @@ const treatments = [
     title: "Swedish",
     detail:
       "Classical strokes, kneading, gliding, and rhythmic movement for an unhurried reset.",
-    image: "/manus-storage/omm-swedish_440dc1a5.jpg",
+    image: "/manus-storage/omm-swedish-corrected_c7727f6a.jpg",
   },
   {
     number: "05",
